@@ -4,24 +4,24 @@ import java.util.UUID;
 
 public class BBElement {
     private final String name;
-    private final boolean box_uv;
-    private final boolean rescale;
-    private final boolean locked;
-    private final double[] from;
-    private final double[] to;
-    private final int autouv;
-    private final int color;
-    private final double inflate;
-    private final double[] rotation;
-    private final double[] origin;
-    private final int[] uv_offset;
+    private final Boolean box_uv;
+    private final Boolean rescale;
+    private final Boolean locked;
+    private final Double[] from;
+    private final Double[] to;
+    private final Integer autouv;
+    private final Integer color;
+    private final Double inflate;
+    private final Double[] rotation;
+    private final Double[] origin;
+    private final Integer[] uv_offset;
     private final BBFaces faces;
     private final String type;
     private final UUID uuid;
 
-    public BBElement(String name, boolean box_uv, boolean rescale,boolean locked, double[] from,
-                     double[] to, int autouv, int color, double inflate, double[] rotation,
-                     double[] origin, int[] uv_offset, BBFaces faces, String type, UUID uuid) {
+    public BBElement(String name, boolean box_uv, boolean rescale,boolean locked, Double[] from,
+                     Double[] to, int autouv, int color, double inflate, Double[] rotation,
+                     Double[] origin, Integer[] uv_offset, BBFaces faces, String type, UUID uuid) {
         this.name = name;
         this.box_uv = box_uv;
         this.rescale = rescale;
@@ -39,7 +39,7 @@ public class BBElement {
         this.uuid = uuid;
     }
 
-    public double[] getOrigin() {
+    public Double[] getOrigin() {
         return origin;
     }
 
@@ -63,15 +63,15 @@ public class BBElement {
         return box_uv;
     }
 
-    public double[] getRotation() {
+    public Double[] getRotation() {
         return rotation;
     }
 
-    public double[] getTo() {
+    public Double[] getTo() {
         return to;
     }
 
-    public double[] getFrom() {
+    public Double[] getFrom() {
         return from;
     }
 
@@ -95,7 +95,7 @@ public class BBElement {
         return autouv;
     }
 
-    public int[] getUv_offset() {
+    public Integer[] getUv_offset() {
         return uv_offset;
     }
 }

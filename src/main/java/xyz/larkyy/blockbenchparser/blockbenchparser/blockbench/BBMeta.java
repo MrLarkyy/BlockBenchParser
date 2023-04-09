@@ -4,7 +4,7 @@ public class BBMeta {
 
     private final String version;
     private final String model_format;
-    private final boolean box_uv;
+    private final Boolean box_uv;
 
     public BBMeta(String version, String model_format, boolean box_uv) {
         this.version = version;

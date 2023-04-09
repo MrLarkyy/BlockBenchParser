@@ -8,10 +8,10 @@ public class BBAnimation {
     private final UUID uuid;
     private final String name;
     private final String loop;
-    private final boolean override;
-    private final double length;
-    private final int snapping;
-    private final boolean selected;
+    private final Boolean override;
+    private final Double length;
+    private final Integer snapping;
+    private final Boolean selected;
     private final String anim_time_update;
     private final String blend_weight;
     private final String start_delay;

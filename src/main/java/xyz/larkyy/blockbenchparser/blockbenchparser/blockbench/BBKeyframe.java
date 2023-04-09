@@ -1,18 +1,16 @@
 package xyz.larkyy.blockbenchparser.blockbenchparser.blockbench;
 
-import xyz.larkyy.blockbenchparser.blockbenchparser.BBDatapoints;
-
 import java.util.UUID;
 
 public class BBKeyframe {
     private final String channel;
-    private final BBDatapoints data_points;
+    private final BBDatapoints[] data_points;
     private final UUID uuid;
-    private final double time;
-    private final int color;
+    private final Double time;
+    private final Integer color;
     private final String interpolation;
 
-    public BBKeyframe(String channel, BBDatapoints data_points, UUID uuid, double time, int color, String interpolation) {
+    public BBKeyframe(String channel, BBDatapoints data_points[], UUID uuid, double time, int color, String interpolation) {
         this.channel = channel;
         this.data_points = data_points;
         this.uuid = uuid;
@@ -29,7 +27,7 @@ public class BBKeyframe {
         return uuid;
     }
 
-    public BBDatapoints getData_points() {
+    public BBDatapoints[] getData_points() {
         return data_points;
     }
 

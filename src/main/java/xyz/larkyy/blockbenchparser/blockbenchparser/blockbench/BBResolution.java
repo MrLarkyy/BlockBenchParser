@@ -2,8 +2,8 @@ package xyz.larkyy.blockbenchparser.blockbenchparser.blockbench;
 
 public class BBResolution {
 
-    private final int width;
-    private final int height;
+    private final Integer width;
+    private final Integer height;
 
     public BBResolution(int width, int height) {
         this.width = width;

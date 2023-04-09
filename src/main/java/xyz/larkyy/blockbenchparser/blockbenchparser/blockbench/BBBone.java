@@ -1,27 +1,25 @@
 package xyz.larkyy.blockbenchparser.blockbenchparser.blockbench;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 public class BBBone implements BBChildren {
 
     private final String name;
-    private final double[] origin;
-    private final int color;
+    private final Double[] origin;
+    private final Integer color;
     private final String boneType;
     private final UUID uuid;
-    private final boolean export;
-    private final boolean mirror_uv;
-    private final boolean isOpen;
-    private final boolean locked;
-    private final boolean visibility;
-    private final int autoUv;
-    private List<BBChildren> childrenList = new ArrayList<>();
+    private final Boolean export;
+    private final Boolean mirror_uv;
+    private final Boolean isOpen;
+    private final Boolean locked;
+    private final Boolean visibility;
+    private final Integer autoUv;
+    private final BBChildren[] children;
 
-    public BBBone(String name, double[] origin, int color, String boneType,
+    public BBBone(String name, Double[] origin, int color, String boneType,
                   UUID uuid, boolean export, boolean mirror_uv, boolean isOpen,
-                  boolean locked, boolean visibility, int autoUv, List<BBChildren> childrenList) {
+                  boolean locked, boolean visibility, int autoUv, BBChildren[] children) {
         this.name = name;
         this.origin = origin;
         this.color = color;
@@ -33,13 +31,13 @@ public class BBBone implements BBChildren {
         this.locked = locked;
         this.visibility = visibility;
         this.autoUv = autoUv;
-        this.childrenList = childrenList;
+        this.children = children;
     }
 
-    public BBBone(String name, double[] origin, int color, String boneType,
+    public BBBone(String name, Double[] origin, int color, String boneType,
                   UUID uuid, boolean export, boolean mirror_uv, boolean isOpen,
                   boolean locked, boolean visibility, int autoUv) {
-        this(name,origin,color,boneType,uuid,export,mirror_uv,isOpen,locked,visibility,autoUv,new ArrayList<>());
+        this(name,origin,color,boneType,uuid,export,mirror_uv,isOpen,locked,visibility,autoUv,new BBChildren[]{});
     }
 
     public UUID getUuid() {
@@ -54,7 +52,7 @@ public class BBBone implements BBChildren {
         return name;
     }
 
-    public double[] getOrigin() {
+    public Double[] getOrigin() {
         return origin;
     }
 
@@ -86,7 +84,7 @@ public class BBBone implements BBChildren {
         return boneType;
     }
 
-    public List<BBChildren> getChildrenList() {
-        return childrenList;
+    public BBChildren[] getChildren() {
+        return children;
     }
 }
