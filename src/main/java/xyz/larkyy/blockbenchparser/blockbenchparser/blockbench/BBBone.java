@@ -15,7 +15,7 @@ public class BBBone implements BBChildren {
     private final Boolean locked;
     private final Boolean visibility;
     private final Integer autoUv;
-    private final BBChildren[] children;
+    private BBChildren[] children = new BBChildren[]{};
 
     public BBBone(String name, Double[] origin, int color, String boneType,
                   UUID uuid, boolean export, boolean mirror_uv, boolean isOpen,

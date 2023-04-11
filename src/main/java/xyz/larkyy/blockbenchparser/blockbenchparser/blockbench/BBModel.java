@@ -4,11 +4,11 @@ public class BBModel {
     private final BBMeta meta;
     private final String name;
     private final String model_identifier;
-    private final Integer[] visible_box;
+    private Integer[] visible_box = new Integer[]{};
     private final String variable_placeholders;
     private final BBResolution resolution;
-    private final BBElement[] elements;
-    private final BBBone[] outliner;
+    private BBElement[] elements = new BBElement[]{};
+    private BBBone[] outliner = new BBBone[]{};
     private final BBTexture[] textures;
     private final BBAnimation[] animations;
 
