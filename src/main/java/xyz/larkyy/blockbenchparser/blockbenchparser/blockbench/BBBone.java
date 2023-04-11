@@ -6,6 +6,7 @@ public class BBBone implements BBChildren {
 
     private final String name;
     private final Double[] origin;
+    private final Double[] rotation;
     private final Integer color;
     private final String boneType;
     private final UUID uuid;
@@ -17,11 +18,12 @@ public class BBBone implements BBChildren {
     private final Integer autoUv;
     private BBChildren[] children = new BBChildren[]{};
 
-    public BBBone(String name, Double[] origin, int color, String boneType,
+    public BBBone(String name, Double[] origin, Double[] rotation, int color, String boneType,
                   UUID uuid, boolean export, boolean mirror_uv, boolean isOpen,
                   boolean locked, boolean visibility, int autoUv, BBChildren[] children) {
         this.name = name;
         this.origin = origin;
+        this.rotation = rotation;
         this.color = color;
         this.boneType = boneType;
         this.uuid = uuid;
@@ -34,10 +36,10 @@ public class BBBone implements BBChildren {
         this.children = children;
     }
 
-    public BBBone(String name, Double[] origin, int color, String boneType,
+    public BBBone(String name, Double[] origin, Double[] rotation, int color, String boneType,
                   UUID uuid, boolean export, boolean mirror_uv, boolean isOpen,
                   boolean locked, boolean visibility, int autoUv) {
-        this(name,origin,color,boneType,uuid,export,mirror_uv,isOpen,locked,visibility,autoUv,new BBChildren[]{});
+        this(name,origin,rotation,color,boneType,uuid,export,mirror_uv,isOpen,locked,visibility,autoUv,new BBChildren[]{});
     }
 
     public UUID getUuid() {
@@ -86,5 +88,9 @@ public class BBBone implements BBChildren {
 
     public BBChildren[] getChildren() {
         return children;
+    }
+
+    public Double[] getRotation() {
+        return rotation;
     }
 }
